@@ -28,6 +28,8 @@
  '(package-selected-packages
    (quote
     (ido-vertical-mode markdown-mode smex icolor-theme-sanityinc-solarized color-theme-sanityinc-tomorrow better-defaults marmalade-demo)))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote

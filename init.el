@@ -27,7 +27,7 @@
  '(fci-rule-color "#373b41")
  '(package-selected-packages
    (quote
-    (smex icolor-theme-sanityinc-solarized color-theme-sanityinc-tomorrow better-defaults marmalade-demo)))
+    (markdown-mode smex icolor-theme-sanityinc-solarized color-theme-sanityinc-tomorrow better-defaults marmalade-demo)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote

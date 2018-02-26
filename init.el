@@ -88,7 +88,10 @@
             (local-set-key "\M-n" 'outline-next-visible-heading)
             (local-set-key (kbd "ESC <down>") 'org-metadown)
             (local-set-key (kbd "ESC <up>") 'org-metaup)
+            (org-indent-mode t)
             ))
+
+
 
 ;;; A simple visible bell which works in all terminal types. Added manually because it is not available in MELPA stable
 (require 'mode-line-bell)

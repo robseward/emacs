@@ -81,3 +81,6 @@
 (require 'mode-line-bell)
 (add-hook 'after-init-hook 'mode-line-bell-mode)
 
+
+;; Ovveride better defaults
+(menu-bar-mode 1)

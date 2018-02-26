@@ -27,7 +27,7 @@
  '(fci-rule-color "#373b41")
  '(package-selected-packages
    (quote
-    (markdown-mode smex icolor-theme-sanityinc-solarized color-theme-sanityinc-tomorrow better-defaults marmalade-demo)))
+    (ido-vertical-mode markdown-mode smex icolor-theme-sanityinc-solarized color-theme-sanityinc-tomorrow better-defaults marmalade-demo)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -56,8 +56,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; ido
 (ido-mode 1)
 (ido-everywhere 1)
+(ido-vertical-mode 1)
+;; smex
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.

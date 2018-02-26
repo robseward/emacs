@@ -61,3 +61,12 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;; ----------------
+;; Org-mode custom bindings
+;; ----------------
+(add-hook 'org-mode-hook 
+          (lambda ()
+            (local-set-key "\M-n" 'outline-next-visible-heading)
+            (local-set-key (kbd "ESC <down>") 'org-metadown)
+            (local-set-key (kbd "ESC <up>") 'org-metaup)
+            ))

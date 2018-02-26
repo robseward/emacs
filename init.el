@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -70,3 +72,8 @@
             (local-set-key (kbd "ESC <down>") 'org-metadown)
             (local-set-key (kbd "ESC <up>") 'org-metaup)
             ))
+
+;;; A simple visible bell which works in all terminal types. Added manually because it is not available in MELPA stable
+(require 'mode-line-bell)
+(add-hook 'after-init-hook 'mode-line-bell-mode)
+

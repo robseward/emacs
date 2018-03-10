@@ -16,7 +16,6 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
-
 ;; ido
 (ido-mode 1)
 (ido-everywhere 1)
@@ -47,6 +46,7 @@
             (local-set-key (kbd "ESC <down>") 'org-metadown)
             (local-set-key (kbd "ESC <up>") 'org-metaup)
             (org-indent-mode t)
+            (setq org-agenda-files '("~/Cloudstation/org"))
             ))
 
 
@@ -55,6 +55,8 @@
 (require 'mode-line-bell)
 (add-hook 'after-init-hook 'mode-line-bell-mode)
 
-
 ;; Ovveride better defaults
 (menu-bar-mode 1)
+
+;; Visual line mode
+(visual-line-mode 1)

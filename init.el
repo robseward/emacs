@@ -46,8 +46,8 @@
             (local-set-key (kbd "ESC <down>") 'org-metadown)
             (local-set-key (kbd "ESC <up>") 'org-metaup)
             (org-indent-mode t)
-            (setq org-agenda-files '("~/Cloudstation/org"))
             ))
+(setq org-agenda-files '("~/CloudStation/org"))
 
 
 

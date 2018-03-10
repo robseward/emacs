@@ -56,7 +56,10 @@
 (add-hook 'after-init-hook 'mode-line-bell-mode)
 
 ;; Ovveride better defaults
-(menu-bar-mode 1)
+(menu-bar-mode 0)
 
 ;; Visual line mode
 (visual-line-mode 1)
+
+;; Full screen
+(toggle-frame-fullscreen)

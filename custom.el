@@ -14,7 +14,7 @@
  '(fci-rule-color "#373b41")
  '(package-selected-packages
    (quote
-    (cyberpunk-theme ido-vertical-mode markdown-mode smex icolor-theme-sanityinc-solarized color-theme-sanityinc-tomorrow better-defaults marmalade-demo)))
+    (olivetti cyberpunk-theme ido-vertical-mode markdown-mode smex icolor-theme-sanityinc-solarized color-theme-sanityinc-tomorrow better-defaults marmalade-demo)))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background nil)

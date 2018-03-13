@@ -49,8 +49,12 @@
             ))
 (setq org-agenda-files '("~/CloudStation/org"))
 (setq org-todo-keywords
-  '((sequence "TODO(t)" "DOING(i)" "WAIT(w!)" "|" "DONE(d!)")))
-
+  '((sequence "TODO(t)" "STARTED(s)" "WAIT(w!)" "|" "DONE(d!)")))
+(setq org-todo-keyword-faces
+      '(("TODO" . org-warning) ("STARTED" . "yellow")
+        ("WAIT" . "lightyellow1")
+        ("DONE" . (:foreground "green" :weight bold))))      
+      
 
 ;;; A simple visible bell which works in all terminal types. Added manually because it is not available in MELPA stable
 (require 'mode-line-bell)

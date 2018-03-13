@@ -48,7 +48,8 @@
             (org-indent-mode t)
             ))
 (setq org-agenda-files '("~/CloudStation/org"))
-
+(setq org-todo-keywords
+  '((sequence "TODO(t)" "DOING(i)" "WAIT(w!)" "|" "DONE(d!)")))
 
 
 ;;; A simple visible bell which works in all terminal types. Added manually because it is not available in MELPA stable

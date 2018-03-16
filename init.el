@@ -53,7 +53,11 @@
 (setq org-todo-keyword-faces
       '(("TODO" . org-warning) ("STARTED" . "yellow")
         ("WAIT" . "lightyellow1")
-        ("DONE" . (:foreground "green" :weight bold))))      
+        ("DONE" . (:foreground "green" :weight bold))))
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
       
 
 ;;; A simple visible bell which works in all terminal types. Added manually because it is not available in MELPA stable

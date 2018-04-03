@@ -47,13 +47,18 @@
             (local-set-key (kbd "ESC <up>") 'org-metaup)
             (org-indent-mode t)
             ))
-(setq org-agenda-files '("~/CloudStation/org"))
+;;(setq org-agenda-files '("~/CloudStation/org"))
+
+(load-library "find-lisp")
+(setq org-agenda-files (find-lisp-find-files "~/CloudStation/org" "\.org$"))
+
 (setq org-todo-keywords
   '((sequence "TODO(t)" "STARTED(s)" "WAIT(w!)" "|" "DONE(d!)")))
 (setq org-todo-keyword-faces
       '(("TODO" . org-warning) ("STARTED" . "yellow")
         ("WAIT" . "lightyellow1")
         ("DONE" . (:foreground "green" :weight bold))))
+
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)

@@ -53,7 +53,7 @@
 (setq org-agenda-files (find-lisp-find-files "~/CloudStation/org" "\.org$"))
 
 ;; Auto save org files 
-(add-hook 'auto-save-hook 'org-save-all-org-buffers)
+;;(add-hook 'auto-save-hook 'org-save-all-org-buffers)
 
 (setq org-todo-keywords
   '((sequence "TODO(t)" "STARTED(s)" "WAIT(w!)" "|" "DONE(d!)")))

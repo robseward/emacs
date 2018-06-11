@@ -80,3 +80,10 @@
 
 ;; Full screen
 (toggle-frame-fullscreen)
+
+
+;; IBuffer
+
+(add-hook 'ibuffer-mode-hook
+	  '(lambda ()
+	     (ibuffer-switch-to-saved-filter-groups "org-and-markdown")))

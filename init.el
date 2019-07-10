@@ -18,24 +18,34 @@
 
 ;; ido
 (ido-mode 1)
-(ido-everywhere 1)
+;; (ido-everywhere 1)
 (ido-vertical-mode 1)
-
+ 
 ;; smex
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; (global-set-key (kbd "M-x") 'smex)
+;; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; smex: substitute space with hyphen 
-(defadvice smex (around space-inserts-hyphen activate compile)
-        (let ((ido-cannot-complete-command 
-               `(lambda ()
-                  (interactive)
-                  (if (string= " " (this-command-keys))
-                      (insert ?-)
-                    (funcall ,ido-cannot-complete-command)))))
-          ad-do-it))
+;; (defadvice smex (around space-inserts-hyphen activate compile)
+;;         (let ((ido-cannot-complete-command 
+;;                `(lambda ()
+;;                   (interactive)
+;;                   (if (string= " " (this-command-keys))
+;;                       (insert ?-)
+;;                     (funcall ,ido-cannot-complete-command)))))
+;;           ad-do-it))
+
+;; ---------------
+;; Helm custom config
+;; ---------------
+(require 'helm-config)
+
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(helm-mode 1)
 
 ;; ----------------
 ;; Org-mode custom bindings
@@ -47,6 +57,8 @@
             (local-set-key (kbd "ESC <up>") 'org-metaup)
             (org-indent-mode t)
             ))
+(add-hook 'auto-save-hook 'org-save-all-org-buffers)
+
 
 ;; load org agenda files recursively
 (load-library "find-lisp")
@@ -79,7 +91,7 @@
 (visual-line-mode 1)
 
 ;; Full screen
-(toggle-frame-fullscreen)
+;; (toggle-frame-fullscreen)
 
 
 ;; IBuffer

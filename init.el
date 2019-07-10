@@ -88,7 +88,7 @@
 (menu-bar-mode 0)
 
 ;; Visual line mode
-(visual-line-mode 1)
+(global-visual-line-mode t)
 
 ;; Full screen
 ;; (toggle-frame-fullscreen)

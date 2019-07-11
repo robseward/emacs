@@ -64,15 +64,13 @@
             (local-set-key (kbd "ESC <up>") 'org-metaup)
             (org-indent-mode t)
             ))
-(add-hook 'auto-save-hook 'org-save-all-org-buffers)
 
+;; Auto save org files 
+(add-hook 'auto-save-hook 'org-save-all-org-buffers)
 
 ;; load org agenda files recursively
 (load-library "find-lisp")
 (setq org-agenda-files (find-lisp-find-files "~/CloudStation/org" "\.org$"))
-
-;; Auto save org files 
-;;(add-hook 'auto-save-hook 'org-save-all-org-buffers)
 
 (setq org-todo-keywords
   '((sequence "TODO(t)" "STARTED(s)" "WAIT(w!)" "|" "DONE(d!)")))

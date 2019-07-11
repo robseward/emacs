@@ -42,6 +42,13 @@
 ;; ---------------
 (require 'helm-config)
 
+(custom-set-variables
+ '(helm-buffers-fuzzy-matching t)
+ '(helm-recentf-fuzzy-match t)
+ '(helm-M-x-fuzzy-match t)
+ '(helm-apropos-fuzzy-match t)
+ '(helm-completion-in-region-fuzzy-match t))
+
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-mini)
